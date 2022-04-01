@@ -36,7 +36,7 @@ For example:
 My host IP is 127.0.0.1 and it's listening on 1080 port.
 
 ```bash
-curl www.baidu.com -x 127.0.0.1:1080
+curl www.baidu.com -v -x 127.0.0.1:1080
 
 * About to connect() to proxy 127.0.0.1 port 1080 (#0)
 *   Trying 127.0.0.1...
@@ -68,7 +68,6 @@ curl www.baidu.com -x 127.0.0.1:1080
 # How to update
 
 ```bash
-
 # Stop current running container
 docker stop nginx-proxy
 
