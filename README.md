@@ -1,11 +1,15 @@
+# What is it?
+
+Build a docker image based on Nginx:1.21.6 for Forward Proxy.
+
 # How to build
 
 ```bash
-git clone <https://github.com/MR-MonkeyRay/nginx-proxy-docker.git>
+git clone https://github.com/MR-MonkeyRay/nginx-proxy-docker.git
 
 cd nginx-proxy-docker
 
-docker build . -t nginx-proxy:latest
+docker build . -t monkeyray/nginx-proxy:latest
 ```
 
 # How to deploy
@@ -16,8 +20,8 @@ Install docker-ce first. And then run the docker.
 docker run -d \
     --name nginx-proxy \
     -p 1080:1080 \
-    -v ./nginx.conf:/etc/nginx/nginx.conf:ro \
-    nginx-proxy:latest
+    -v ${pwd}/nginx.conf:/etc/nginx/nginx.conf:ro \
+    monkeyray/nginx-proxy:latest
 ```
 
 # How to test
